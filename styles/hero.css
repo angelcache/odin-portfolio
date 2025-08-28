@@ -1,5 +1,5 @@
 #hero {
-  background: linear-gradient(var(--hero-bg) 70%, var(--project-bg));
+  background: linear-gradient(var(--hero-bg) 60%, var(--project-bg));
   width: 100vw;
   min-height: 100vh;
   position: relative;
@@ -24,7 +24,7 @@
   z-index: 1;
   right: 7%;
   animation: reveal 2s ease-in-out forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
   opacity: 0;
 }
 
@@ -34,6 +34,7 @@
   left: 0;
   right: 0;
   margin: 0 auto;
+  margin-top: 50px;
   max-width: 80vw;
   min-height: 85vh;
   background-color: var(--project-box-bg);
@@ -157,8 +158,49 @@ ul {
   }
 }
 
+@media (max-width: 900px) {
+  .faint-box > h1 {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 600px) {
+  .sun {
+    width: 270px;
+  }
   .clouds {
-    background-size: 100% 40%;
+    background-size: 100% 60%;
+  }
+
+  .faint-box {
+    margin-top: 50px;
+  }
+
+  .faint-box > h1 {
+    font-size: 2.5rem;
+  }
+
+  .faint-box > p {
+    font-size: 1rem;
+  }
+
+  .curr-title span,
+  .curr-title i,
+  .foundations-text ul {
+    font-size: 0.9rem;
+  }
+
+  .faint-box .checkout-text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .faint-box img {
+    width: 15px;
+  }
+
+  .curriculum {
+    flex-direction: column;
+    gap: 20px;
   }
 }
