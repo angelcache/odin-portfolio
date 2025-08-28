@@ -1,5 +1,5 @@
 #hero {
-  background-color: var(--hero-bg);
+  background: linear-gradient(var(--hero-bg) 70%, var(--project-bg));
   width: 100vw;
   min-height: 100vh;
   position: relative;
@@ -14,7 +14,7 @@
   min-height: 75vh;
   position: relative;
   z-index: 2;
-  animation: fade-in 2s ease-in-out forwards;
+  animation: fade-in 4s ease-in-out forwards;
   opacity: 0;
 }
 
@@ -22,11 +22,116 @@
   width: clamp(100px, 30vw, 400px);
   position: absolute;
   z-index: 1;
-  right: 10%;
+  right: 7%;
   animation: reveal 2s ease-in-out forwards;
   animation-delay: 3s;
   opacity: 0;
 }
+
+.faint-box {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 80vw;
+  min-height: 85vh;
+  background-color: var(--project-box-bg);
+  z-index: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.faint-box > h1 {
+  font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif;
+  font-size: clamp(3rem, 30vw, 4rem);
+  color: var(--highlight-text);
+  font-weight: 500;
+}
+
+.faint-box > p {
+  font-size: 1.2rem;
+}
+
+.faint-box p {
+  font-family: 'Gentium Book Plus', Arial, Helvetica, sans-serif;
+  color: var(--body-text);
+  font-weight: 500;
+  line-height: 1.5;
+  width: 80%;
+}
+
+.odin-link {
+  text-decoration: none;
+  color: var(--highlight-text);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.odin-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--highlight-text);
+  transition: width 0.3s ease-in-out;
+}
+
+.odin-link:hover::after {
+  width: 100%;
+}
+
+ul {
+  font-family: 'Gentium Book Plus', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: var(--body-text);
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.curr-title > span {
+  text-decoration: underline;
+}
+
+.update {
+  color: var(--highlight-text);
+  font-weight: normal;
+}
+
+.faint-box .checkout-text {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.curriculum {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 80px;
+}
+
+.foundations-text,
+.full-stack-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.curr-title {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
 
 @keyframes fade-in {
   from {
@@ -48,7 +153,6 @@
 
   to {
     top: 0;
-    right: 10%;
     opacity: 1;
   }
 }
