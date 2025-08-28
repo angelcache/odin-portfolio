@@ -13,7 +13,7 @@
   width: 100vw;
   min-height: 75vh;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   animation: fade-in 4s ease-in-out forwards;
   opacity: 0;
 }
@@ -25,6 +25,15 @@
   right: 7%;
   animation: reveal 2s ease-in-out forwards;
   animation-delay: 2s;
+  opacity: 0;
+}
+
+.odin-link-img {
+  visibility: hidden;
+  width: clamp(100px, 25vw, 400px);
+  position: absolute;
+  z-index: 2;
+  right: 7%;
   opacity: 0;
 }
 
@@ -133,6 +142,10 @@ ul {
   justify-content: center;
 }
 
+.faint-box img {
+  animation: point-down 3s ease-in-out infinite;
+}
+
 
 @keyframes fade-in {
   from {
@@ -155,6 +168,50 @@ ul {
   to {
     top: 0;
     opacity: 1;
+  }
+}
+
+@keyframes reveal-odin {
+  from {
+    top: -20px;
+    right: 30%;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes hide-odin {
+  from {
+    top: -20px;
+    right: 30%;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes point-down {
+  from {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+
+  to {
+    transform: translateY(0px);
   }
 }
 
