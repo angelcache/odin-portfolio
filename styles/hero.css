@@ -1,0 +1,47 @@
+#hero {
+  background-color: var(--hero-bg);
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.clouds {
+  background-image: url(../assets/bg-imgs/clouds.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top;
+  width: 100vw;
+  min-height: 80vh;
+  position: relative;
+  z-index: 2;
+}
+
+.sun {
+  width: clamp(100px, 30vw, 400px);
+  position: absolute;
+  z-index: 1;
+  right: 10%;
+  animation: reveal 2s ease-in-out forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+@keyframes reveal {
+  from {
+    top: -130px;
+    right: 30%;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    right: 10%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .clouds {
+    background-size: 100% 40%;
+  }
+}
