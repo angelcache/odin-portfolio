@@ -10,9 +10,10 @@ let locked = false;
 // Delay listening into hover to wait for assets to load and animate in fully
 setTimeout(() => {
   odinLink.addEventListener("mouseenter", () => {
+
     if (locked) return;
     locked = true;
-
+    
     odinLogo.style.visibility = "visible";
     odinLogo.style.animation = "none";
     void odinLogo.offsetWidth;
