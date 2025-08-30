@@ -6,7 +6,7 @@
   background-size: 150px 150px;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: center;
   justify-content: center;
   padding-bottom: 100px;
   align-items: center;
@@ -30,33 +30,35 @@
   position: absolute;
   top: -301px;
 }
+
 .pillar { left: 0; }
 .pillar-reverse { transform: scaleX(-1); right: 0; }
 
 .mySwiper {
-  width: 60%;
+  width: 100%;
   padding-top: 150px;
   overflow: visible;
   z-index: -1;
+  position: relative;
 }
 
 .swiper-wrapper {
   display: flex;
-  gap: 60px;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
+  width: 100% !important;
+  height: 500px !important;
 }
 
-.swiper-slide {
-  width: 376px !important;
-  height: 500px !important;
-  position: relative;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
 
 .project-img {
   width: 376px;
   height: 223px;
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
@@ -68,31 +70,90 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
-  
 }
 
 .swiper-slide-active {
-  transform: translateY(-50px) scale(1.1);
-  z-index: 2;
+  transform: translateX(0) scale(1.1);
+  z-index: 2 !important;
+  animation: slideUp 1s ease-in-out forwards;
 }
 
-.swiper-slide-next,
+.swiper-slide-next {
+  opacity: 0.8;
+  margin-top: 100px;
+  z-index: 1;
+  animation: slideRightToLeft 1s ease-in-out forwards;
+}
+
 .swiper-slide-prev {
   opacity: 0.8;
-  transform: scale(0.95);
+  margin-top: 100px;
+  z-index: 1;
+  animation: slideLeftToRight 1s ease-in-out forwards;
+}
+
+.swiper-slide {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(5%) translateY(10%);
+  }
+
+  to {
+    transform: translateX(0) translateY(0%);
+  }
+}
+
+@keyframes slideLeftToRight {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideRightToLeft {
+  from {
+    transform: translateY(10%); 
+  }
+  to {
+    transform: translateY(0); 
+  }
+}
+
+.swiper-slide-next {
+  animation: slideRightToLeft 1s ease-in-out;
+}
+
+.swiper-slide-prev {
+  animation: slideLeftToRight 1s ease-in-out; 
 }
 
 .swiper-button-prev,
 .swiper-button-next {
+  position: absolute;
   color: var(--project-text);
   font-size: 2.5rem;
   font-weight: bold;
   text-shadow: 0 0 10px rgba(0,0,0,0.6);
   transition: transform 0.2s ease, color 0.3s ease;
+  z-index: 5;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   color: var(--highlight-color);
   transform: scale(1.2);
+}
+
+.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
+  opacity: 0;
+  pointer-events: none;
 }
