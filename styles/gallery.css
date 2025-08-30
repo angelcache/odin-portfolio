@@ -30,23 +30,34 @@
   position: absolute;
   top: -301px;
 }
+.pillar { left: 0; }
+.pillar-reverse { transform: scaleX(-1); right: 0; }
 
-.pillar {
-  left: 0;
+.mySwiper {
+  width: 60%;
+  padding-top: 150px;
+  overflow: visible;
+  z-index: -1;
 }
 
-.pillar-reverse {
-  transform: scaleX(-1);
-  right: 0;
-}
-
-.projects {
+.swiper-wrapper {
+  display: flex;
+  gap: 60px;
   position: relative;
+}
+
+.swiper-slide {
+  width: 376px !important;
+  height: 500px !important;
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .project-img {
   width: 376px;
   height: 223px;
+  position: relative;
+  z-index: 1;
 }
 
 .frame {
@@ -55,32 +66,33 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 0;
+  
 }
 
-.left-project, 
-.center-project,
-.right-project {
-  position: relative;
-  width: 376px;
-  height: 223px;
-}
-
-.left-project {
-  position: absolute;
-  left: -270px;
-  top: 180px;
-}
-
-.center-project {
-  top: -45px;
+.swiper-slide-active {
+  transform: translateY(-50px) scale(1.1);
   z-index: 2;
 }
 
-.right-project {
-  position: absolute;
-  left: 270px;
-  top: 180px;
-  z-index: 1;
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--project-text);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: var(--highlight-color);
+  transform: scale(1.2);
 }

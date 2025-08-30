@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="styles/hero.css">
   <link rel="stylesheet" href="styles/gallery.css">
   <link rel="stylesheet" href="styles/modern-normalize.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <title>Odin Portfolio</title>
 </head>
 
@@ -25,19 +28,20 @@
       <div class="clouds"></div>
       <div class="faint-box">
         <h1>odin portfolio</h1>
-        <p>Hi my name is Angela! Welcome to my    Odin portfolio, this showcases a series of projects I made while going
+        <p>Hi my name is Angela! Welcome to my Odin portfolio, this showcases a series of projects I made while going
           through the
-          <a class="odin-link" href="https://www.theodinproject.com/dashboard" target="_blank" rel=" noreferrer noopener">
+          <a class="odin-link" href="https://www.theodinproject.com/dashboard" target="_blank"
+            rel=" noreferrer noopener">
             Odin Project</a>
           course curriculum. The Odin Project consists of:
         </p>
         <div class="curriculum">
-          
+
           <div class="foundations-text">
             <p class="curr-title">
               <span>Foundations</span>
               <i class="update">completed</i>
-          </p>
+            </p>
             <ul>
               <li>Git Basics</li>
               <li>HTML Foundations</li>
@@ -67,24 +71,40 @@
       <img class="pillar" src="assets/bg-imgs/pillar.png" alt="pillar" draggable="false">
       <img class="pillar-reverse" src="assets/bg-imgs/pillar.png" alt="pillar" draggable="false">
       <h1>FOUNDATIONS</h1>
-      <div class="projects">
-        <div class="left-project">
-          <img class="project-img" src="assets/imgs/projects/landing.png" alt="landing project image" draggable="false">
-          <img class="frame" src="assets/bg-imgs/frame-silver.png" alt="project frame" draggable="false">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="project-img" src="assets/imgs/projects/project1.png" alt="">
+            <img class="frame" src="assets/bg-imgs/frame-silver.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="project-img" src="assets/imgs/projects/project2.png" alt="">
+            <img class="frame" src="assets/bg-imgs/frame-silver.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="project-img" src="assets/imgs/projects/project3.png" alt="">
+            <img class="frame" src="assets/bg-imgs/frame-silver.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="project-img" src="assets/imgs/projects/project4.png" alt="">
+            <img class="frame" src="assets/bg-imgs/frame-silver.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="project-img" src="assets/imgs/projects/project5.png" alt="">
+            <img class="frame" src="assets/bg-imgs/frame-silver.png" alt="">
+          </div>
         </div>
-        <div class="center-project">
-          <img class="project-img" src="assets/imgs/projects/landing.png" alt="landing project image" draggable="false">
-          <img class="frame" src="assets/bg-imgs/frame-gold.png" alt="project frame" draggable="false">
-        </div>
-        <div class="right-project">
-          <img class="project-img" src="assets/imgs/projects/landing.png" alt="landing project image" draggable="false">
-          <img class="frame" src="assets/bg-imgs/frame-silver.png" alt="project frame" draggable="false">
-        </div>
+
+        <!-- Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
   </main>
 
   <script src="scripts/hero.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="scripts/gallery.js"></script>
 </body>
 
 </html>
