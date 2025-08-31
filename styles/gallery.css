@@ -35,7 +35,7 @@
 
 .brick-decor {
   position: absolute;
-  bottom: -60px;
+  bottom: 0;
 }
 
 .mySwiper {
@@ -63,6 +63,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  cursor: url("../assets/imgs/icons/cursor-glow.png") 10 55, auto;
 }
 
 .frame {
@@ -139,6 +140,7 @@
   font-weight: bold;
   transition: transform 0.2s ease, color 0.3s ease;
   z-index: 10!important;
+  cursor: url("../assets/imgs/icons/cursor-glow.png") 10 55, auto !important;
 }
 
 .swiper-button-prev {
