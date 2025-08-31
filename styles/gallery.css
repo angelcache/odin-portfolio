@@ -9,7 +9,7 @@
   padding-bottom: 100px;
   align-items: center;
   width: 100vw;
-  min-height: 1138px;
+  min-height: 1135px;
   gap: clamp(10px, 5vh, 200px);
 }
 
@@ -171,4 +171,37 @@
   z-index: 6;
   font-family: 'Gentium Book Plus', Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
+}
+
+.arrow-text::before,
+.arrow-text::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  animation: fadeText 10s infinite;
+}
+
+.arrow-text::before {
+  content: "Wander the gallery using the arrows";
+  animation-delay: 0s;
+}
+
+.arrow-text::after {
+  content: "Select the center artwork to view the project";
+  animation-delay: 5s;
+}
+
+@keyframes fadeText {
+  0%, 45% {
+    opacity: 1;
+  }
+
+  50%, 95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
