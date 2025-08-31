@@ -1,0 +1,37 @@
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 705px;
+  background-image: url(../assets/bg-imgs/contact.png);
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 60%;
+  background-image: url(../assets/bg-imgs/contact-card.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contact-box > h2 {
+  color: var(--highlight-text);
+  font-size: 2.2rem;
+  font-family: 'Gentium Book Plus', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links img {
+  cursor: url("../assets/imgs/icons/cursor-glow.png") 10 55, auto;
+}

@@ -152,9 +152,13 @@ ul {
 }
 
 .down-arrow {
-  cursor: url("../assets/imgs/icons/cursor-glow.png") 10 55, auto;
   width: 50px;
   height: 40px;
+}
+
+.down-arrow,
+.down-arrow img {
+  cursor: url("../assets/imgs/icons/cursor-glow.png") 10 55, auto;
 }
 
 
