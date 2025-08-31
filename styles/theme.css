@@ -12,5 +12,9 @@
 }
 
 * {
+  cursor: url("../assets/imgs/icons/cursor.png") 10 55, auto;
   scroll-behavior: smooth;
+}
+
+a:hover, button:hover {
 }

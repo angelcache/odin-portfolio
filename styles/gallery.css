@@ -1,9 +1,7 @@
 #gallery {
   background-color: var(--gallery-bg);
-  background-image: 
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-  background-size: 150px 150px;
+  background-image: url(../assets/bg-imgs/brick-wall.png);
+  background-size: fill;
   position: relative;
   display: flex;
   flex-direction: center;
@@ -34,6 +32,11 @@
 
 .pillar { left: 0; }
 .pillar-reverse { transform: scaleX(-1); right: 0; }
+
+.brick-decor {
+  position: absolute;
+  bottom: -60px;
+}
 
 .mySwiper {
   width: 100%;
