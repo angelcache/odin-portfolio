@@ -29,6 +29,7 @@
 .pillar-reverse {
   position: absolute;
   top: -301px;
+  z-index: 5;
 }
 
 .pillar { left: 0; }
@@ -48,9 +49,8 @@
   align-items: center;
   position: relative;
   width: 100% !important;
-  height: 500px !important;
+  height: 1000px !important;
 }
-
 
 .project-img {
   width: 376px;
@@ -76,18 +76,18 @@
   transform: translateX(0) scale(1.1);
   z-index: 2 !important;
   animation: slideUp 1s ease-in-out forwards;
+  margin-bottom: 300px;
 }
 
 .swiper-slide-next {
   opacity: 0.8;
-  margin-top: 100px;
+  margin-top: 400px;
   z-index: 1;
-  animation: slideRightToLeft 1s ease-in-out forwards;
 }
 
 .swiper-slide-prev {
   opacity: 0.8;
-  margin-top: 100px;
+  margin-top: 400px;
   z-index: 1;
   animation: slideLeftToRight 1s ease-in-out forwards;
 }
@@ -102,7 +102,7 @@
 
 @keyframes slideUp {
   from {
-    transform: translateX(5%) translateY(10%);
+    transform: translateX(5%) translateY(35%);
   }
 
   to {
@@ -112,16 +112,7 @@
 
 @keyframes slideLeftToRight {
   from {
-    transform: translateY(-10%);
-  }
-  to {
-    transform: translateY(0); 
-  }
-}
-
-@keyframes slideRightToLeft {
-  from {
-    transform: translateY(10%); 
+    transform: translateY(-20%);
   }
   to {
     transform: translateY(0); 
@@ -138,13 +129,21 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  position: absolute;
-  color: var(--project-text);
+  position: absolute !important;
+  top: 85% !important;
+  color: var(--project-text) !important;
   font-size: 2.5rem;
   font-weight: bold;
-  text-shadow: 0 0 10px rgba(0,0,0,0.6);
   transition: transform 0.2s ease, color 0.3s ease;
-  z-index: 5;
+  z-index: 10!important;
+}
+
+.swiper-button-prev {
+  left: 25% !important;
+}
+
+.swiper-button-next {
+  right: 25% !important;
 }
 
 .swiper-button-prev:hover,
@@ -156,4 +155,15 @@
 .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
   opacity: 0;
   pointer-events: none;
+}
+
+.arrow-text {
+  position: absolute;
+  top: 82.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--project-arrow-text);
+  z-index: 6;
+  font-family: 'Gentium Book Plus', Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
 }

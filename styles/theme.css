@@ -8,4 +8,9 @@
   --project-box-bg: #E1D4C166;
   --project-text: #E0C374;
   --project-border: #BE8869;
+  --project-arrow-text: #505050E6;
+}
+
+* {
+  scroll-behavior: smooth;
 }
