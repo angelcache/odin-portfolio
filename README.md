@@ -9,7 +9,7 @@ An interactive portfolio designed as a **Greek-inspired art gallery**, where pro
 - Clear **project showcases** (Calculator, Rock-Paper-Scissors, Etch-a-Sketch, Library App, etc.)  
 - Fully responsive design that adapts to different screen sizes  
 
-## 🧰 Built with  
+## 🔧 Built with  
 - HTML  
 - CSS
 - JavaScript  
