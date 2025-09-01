@@ -1,7 +1,8 @@
 #gallery {
   background-color: var(--gallery-bg);
   background-image: url(../assets/bg-imgs/brick-wall.png);
-  background-size: fill;
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   flex-direction: center;
@@ -9,7 +10,8 @@
   padding-bottom: 100px;
   align-items: center;
   width: 100vw;
-  min-height: 1135px;
+  height: 961px;
+  min-height: 100px;
   gap: clamp(10px, 5vh, 200px);
 }
 
@@ -18,7 +20,7 @@
   top: 0px;
   color: var(--project-text);
   font-family: 'Cormorant Garamond', Arial, Helvetica, sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: normal;
   letter-spacing: 5px;
 }
@@ -26,12 +28,13 @@
 .pillar,
 .pillar-reverse {
   position: absolute;
+  width: 520px;
   top: -301px;
   z-index: 5;
 }
 
-.pillar { left: 0; }
-.pillar-reverse { transform: scaleX(-1); right: 0; }
+.pillar { left: -20px; }
+.pillar-reverse { transform: scaleX(-1); right: -20px; }
 
 .brick-decor {
   position: absolute;
@@ -59,8 +62,8 @@
 }
 
 .project-img {
-  width: 376px;
-  height: 223px;
+  width: 295px;
+  height: 175px;
   position: relative;
   top: 50%;
   left: 50%;
@@ -70,7 +73,7 @@
 }
 
 .frame {
-  width: 570px;
+  width: 470px;
   height: auto;
   position: absolute;
   top: 50%;
@@ -103,13 +106,13 @@
 
 .swiper-slide-next {
   opacity: 0.8;
-  margin-top: 400px;
+  margin-top: 300px;
   z-index: 1;
 }
 
 .swiper-slide-prev {
   opacity: 0.8;
-  margin-top: 400px;
+  margin-top: 300px;
   z-index: 1;
   animation: slideLeftToRight 1s ease-in-out forwards;
 }
@@ -234,14 +237,14 @@
 
   .pillar,
   .pillar-reverse {
-    width: 495px;
+    width: 505px;
   }
   .pillar  {
-    left: -110px;
+    left: -100px;
   }
 
   .pillar-reverse {
-    right: -110px;
+    right: -100px;
   }
 
   .swiper-slide-active {
