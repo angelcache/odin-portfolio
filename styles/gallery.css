@@ -227,7 +227,7 @@
 
 @media (max-width: 1024px) {
   #gallery {
-    height: 900px;
+    height: 925px;
     min-height: 300px;
   }
 
@@ -239,13 +239,7 @@
   .pillar-reverse {
     width: 505px;
   }
-  .pillar  {
-    left: -100px;
-  }
-
-  .pillar-reverse {
-    right: -100px;
-  }
+ 
 
   .swiper-slide-active {
     margin-bottom: 0;
