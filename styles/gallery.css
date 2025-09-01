@@ -299,6 +299,13 @@
   .project-img {
     width: 250px;
     height: 148px;
+    display: none;
+  }
+
+  .project-img:hover {
+    filter: drop-shadow(0 0 15px gold);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
   }
 
   .frame {
