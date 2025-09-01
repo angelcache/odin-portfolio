@@ -36,13 +36,16 @@
 .brick-decor {
   position: absolute;
   bottom: 0;
+  width: 100vw;
+  object-fit: cover;
+  height: 35px;
 }
 
 .mySwiper {
   width: 100%;
   padding-top: 150px;
   overflow: visible;
-  z-index: -1;
+  z-index: 1;
   position: relative;
 }
 
@@ -179,29 +182,141 @@
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  animation: fadeText 10s infinite;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 .arrow-text::before {
   content: "Wander the gallery using the arrows";
-  animation-delay: 0s;
+  animation-name: fadeBefore;
 }
 
 .arrow-text::after {
   content: "Select the center artwork to view the project";
-  animation-delay: 5s;
+  animation-name: fadeAfter;
 }
 
-@keyframes fadeText {
-  0%, 45% {
-    opacity: 1;
+@keyframes fadeBefore {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes fadeAfter {
+  0%, 45% { opacity: 0; }
+  50%, 95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 1024px) {
+  #gallery {
+    height: 900px;
+    min-height: 300px;
   }
 
-  50%, 95% {
-    opacity: 0;
+  #gallery > h1 {
+    font-size: 3.4rem;
   }
 
-  100% {
-    opacity: 1;
+  .pillar,
+  .pillar-reverse {
+    width: 495px;
+  }
+  .pillar  {
+    left: -110px;
+  }
+
+  .pillar-reverse {
+    right: -110px;
+  }
+
+  .swiper-slide-active {
+    margin-bottom: 0;
+  }
+
+  .arrow-text {
+    font-size: 1rem;
+  }
+
+  .faint-box {
+    z-index: 200;
+  }
+}
+
+@media (max-width: 900px) {
+  #gallery {
+    height: 900px;
+    min-height: 300px;
+  }
+
+  #gallery > h1 {
+    font-size: 3.4rem;
+  }
+
+  .pillar,
+  .pillar-reverse {
+    width: 495px;
+  }
+  .pillar  {
+    left: -110px;
+  }
+
+  .pillar-reverse {
+    right: -110px;
+  }
+
+  .swiper-slide-active {
+    margin-bottom: 0;
+  }
+
+  .arrow-text {
+    font-size: 1rem;
+  }
+
+  .faint-box {
+    z-index: 200;
+  }
+}
+
+@media (max-width: 600px) {
+  #gallery {
+    height: 720px;
+    min-height: 300px;
+  }
+
+  #gallery > h1 {
+    font-size: 2.2rem;
+  }
+
+  .brick-decor {
+    width: 100vw;
+  }
+
+  .pillar,
+  .pillar-reverse {
+    display: none;
+  }
+
+  .project-img {
+    width: 250px;
+    height: 148px;
+  }
+
+  .frame {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .swiper-slide-active {
+    margin-bottom: 0;
+  }
+
+  .arrow-text {
+    top: 70%;
+    font-size: 1rem;
   }
 }

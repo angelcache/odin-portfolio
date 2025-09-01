@@ -5,6 +5,7 @@
   width: 100vw;
   height: 705px;
   background-image: url(../assets/bg-imgs/contact.png);
+  overflow: hidden;
 }
 
 .contact-box {
