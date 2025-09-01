@@ -9,6 +9,10 @@
   --project-text: #E0C374;
   --project-border: #BE8869;
   --project-arrow-text: #505050E6;
+  --project-glow-1-white: #FFFFFFE6;
+  --project-glow-1-gold: #FFD700CC;
+  --project-glow-2-white: #FFFFFFFF;
+  --project-glow-2-gold: #FFD700FF;
 }
 
 * {

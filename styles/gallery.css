@@ -86,6 +86,21 @@
   margin-bottom: 300px;
 }
 
+.project-img:hover {
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--project-glow-1-white),
+    0 0 30px var(--project-glow-1-gold);
+  }
+  50% {
+    box-shadow: 0 0 25px var(--project-glow-2-white),
+    0 0 50px var(--project-glow-2-gold);
+  }
+}
+
 .swiper-slide-next {
   opacity: 0.8;
   margin-top: 400px;
@@ -299,13 +314,6 @@
   .project-img {
     width: 250px;
     height: 148px;
-    display: none;
-  }
-
-  .project-img:hover {
-    filter: drop-shadow(0 0 15px gold);
-    transform: scale(1.05);
-    transition: all 0.3s ease;
   }
 
   .frame {
